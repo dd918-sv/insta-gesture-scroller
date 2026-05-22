@@ -56,6 +56,6 @@ python3 main.py
 ```
 On starting it will require some camera permissions. Please give the required permission to use the project without facing problems.
 
-
+After the script starts running open instagram and go to reels for using the app.
 
 
