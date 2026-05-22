@@ -41,20 +41,48 @@ source venv/bin/activate
 ```
 
 ### Windows
+To avoid any issues please firstly install python's version 3.9.6(search for this version on the webpage) using the link: https://www.python.org/downloads/windows/
+
+Download the 64-bit version.
+Below is the installation guide:
+1. CHECK: Add Python to PATH option
+2. Click: Customize Installation
+3. Keep defaults
+4. Install
+5. Verify the version exists using
+   ```bash
+     py -0
+   ## You should see something like:
+   ##  -v:3.13*
+   ##  -v:3.9
+   ```
+Go to the project folder and open the terminal for that folder.
+Then follow the below steps:
 ```bash
-python -m venv venv
-venv\Scripts\activate
+py -3.9 -m venv venv
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+.\venv\Scripts\activate
+## Check python version:
+python --version
+## It should show Python 3.9.x
 ```
-## 3. Install dependencies
+Install dependencies:
+
 ```bash
-pip install -r requirements.txt
+pip install opencv-python mediapipe=0.10.14 numpy pyautogui
 ```
 
 ## 4. Start the project
+### macOS/Linux
 ```bash
 python3 main.py
 ```
-On starting it will require some camera permissions. Please give the required permission to use the project without facing problems.
+
+### Windows
+```bash
+python main.py
+```
+On starting it might require some camera permissions. Please give the required permission to use the project without facing problems.
 
 After the script starts running open instagram and go to reels for using the app.
 
